@@ -46,4 +46,13 @@ export default class UserDemogaphic {
     }
   return lifeExpect;
   }
+
+
+  calcRemainLife (lifeExpect, planet, planetAge) {
+    let remainLife = 0;
+    switch(planet) {
+      case("Mercury"):
+      remainLife += ((lifeExpect * 0.24) - planetAge);
+    }
+  }
 };
