@@ -5,17 +5,17 @@ describe('PlanetAge', () => {
   let yourAge = 30;
   let planetAge = new PlanetAge(yourAge);
   test('Should correctly create a PlanetAge object with planet and their formula values', () => {
-    expect(planetAge.mercury).toEqual(yourAge * 0.24);
-    expect(planetAge.venus).toEqual(yourAge * 0.62);
-    expect(planetAge.mars).toEqual(yourAge * 1.88);
-    expect(planetAge.jupiter).toEqual(yourAge * 11.86);
+    expect(planetAge.yourAge).toEqual(30);
   });
-
-  test('Should correctly calculate a user age based on what planet they are on.');
+  test('Should correctly calculate user age in Mercury yers.',() => {
   let yourAge = 30;
-  expect(planetAge.venus).toEqual();
+  let planetAge = new PlanetAge(yourAge);
+  expect(planetAge.mercuryAge()).toEqual(7.2);
+  });
 });
 
 
 
-
+// expect(planetAge.venus).toEqual(yourAge * 0.62);
+// expect(planetAge.mars).toEqual(yourAge * 1.88);
+// expect(planetAge.jupiter).toEqual(yourAge * 11.86);
