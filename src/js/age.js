@@ -44,6 +44,6 @@ export default class UserDemogaphic {
       default: 
         return ("Please select an activity level.")
     }
-  return "lifeExpect";
+  return lifeExpect;
   }
 };
