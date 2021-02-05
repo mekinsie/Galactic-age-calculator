@@ -57,6 +57,8 @@ export default class UserDemogaphic {
       case("Venus"):
         remainLife += ((lifeExpect * 0.62) - planetAge);
         break;
+      case("Mars"):
+        break;
     }
     return remainLife;
   }
