@@ -25,10 +25,6 @@ test('Should correctly calculate user age in Jupiter years.',() => {
     let planet = "Jupiter"
     expect(userDemographic.planetAgeCalc(planet)).toEqual(355.79999999999995);
   });
-test('Should correctly calculate user life expectancy for each planet', () => {
-    expect(userDemographic.planetAgeCalc()).toEqual();
-  });
-
   let planetAge;
   let planet;
   beforeEach(() => {
@@ -37,13 +33,13 @@ test('Should correctly calculate user life expectancy for each planet', () => {
   });
   test('Should correctly calculate earth life expectancy based on user sedentary activity', () =>{
     let activityLevel = "Sedentary";
-      expect(userDemographic.planetLifeRemain(planetAge, activityLevel, planet)).toEqual(10.32);
+      expect(userDemographic.determineLifeExpect(activityLevel).toEqual(73);
     })
-  test('Should correctly calculate earth life expectancy based on user moderate activity', () =>{
-      let activityLevel = "Moderate";
-      expect(userDemographic.planetLifeRemain(planetAge, activityLevel, planet)).toEqual(10.32);
-    })
-  });
+  // test('Should correctly calculate earth life expectancy based on user moderate activity', () =>{
+  //     let activityLevel = "Moderate";
+  //     expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(74.3);
+  //   })
+  // });
 
 
 
