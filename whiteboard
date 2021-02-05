@@ -1,0 +1,36 @@
+Planet solar year = number of days(variable)
+planetSolarYear = days
+yourAge = x
+
+Class that does each of the following:
+
+Class PlanetAge:
+mercuryAge: yourAge(0.24)
+VenusAge: yourAge(0.62)
+MarsAge: yourAge(1.88)]
+JupiterAge: yourAge(11.86)
+
+lifeExpectMercury: (73*0.24) - mercuryAge
+lifeExpectVenus: (73*0.24) - venusAge
+lifeExpectMars: (73*0.24) - mercuryAge
+lifeExpectJupiter: (73*0.24) - jupiterAge
+
+general lifeExpect = (lifeExpectancy * planetConvert.planet) - (PlanetAge.planet)
+
+Class: PlanetConvert
+mercury = 0.24
+Venus = 0.62
+Mars = 1.88
+Jupiter= 11.86
+
+Determine how many years left 
+
+Average world life expectancy: 73 years. 
+Need to determine life expectancy based on demographics. LATER
+Activity level
+
+
+How long you have left to live on earth: 73 - yourAge
+
+already surpassed life expectancy? return nmber of years they lived past life expectancy (use if-then statement if age > life expectancy):
+years lived past: (theirAge - lifeExpectancyAge)(planetYearConversion)
