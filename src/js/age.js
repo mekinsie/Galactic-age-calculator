@@ -5,8 +5,11 @@ export default class PlanetAge {
   mercuryAge () {
     return (this.yourAge * 0.24);
   }
-  VenusAge () {
+  venusAge () {
     return (this.yourAge * 0.62);
+  }
+  marsAge () {
+    return "fail"
   }
   }
 
