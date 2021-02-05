@@ -2,37 +2,38 @@ import { TestScheduler } from 'jest';
 import PlanetAge from '../src/js/age.js'
 
 describe('PlanetAge', () => {
-  let earthAge = 30;
-  let planetAge = new PlanetAge(earthAge);
+  let planetAge;
+  beforeEach(() => {
+    planetAge = new PlanetAge(30);
+  });
   test('Should correctly create a PlanetAge object with planet and their formula values', () => {
     expect(planetAge.earthAge).toEqual(30);
   });
   test('Should correctly calculate user age in Mercury years.',() => {
-  let earthAge = 30;
-  let planetAge = new PlanetAge(earthAge);
-  expect(planetAge.mercuryAge()).toEqual(7.199999999999999);
+  let planet = "Mercury"
+  expect(planetAge.planetAgeCalc(planet)).toEqual(7.199999999999999);
   });
   test('Should correctly calculate user age in Venus years.',() => {
-    let earthAge = 30;
-    let planetAge = new PlanetAge(earthAge);
-    expect(planetAge.venusAge()).toEqual(18.6);
+    let planet = "Venus"
+    expect(planetAge.planetAgeCalc(planet)).toEqual(18.6);
     });
   test('Should correctly calculate user age in Mars years.',() => {
-    let earthAge = 30; 
-    let planetAge = new PlanetAge(earthAge);
-    expect(planetAge.marsAge()).toEqual(56.4);
+    let planet = "Mars"
+    expect(planetAge.planetAgeCalc(planet)).toEqual(56.4);
     });
   test('Should correctly calculate user age in Jupiter years.',() => {
-    let earthAge = 30; 
-    let planetAge = new PlanetAge(earthAge);
-    expect(planetAge.jupiterAge()).toEqual(355.79999999999995);
+    let planet = "Jupiter"
+    expect(planetAge.planetAgeCalc(planet)).toEqual(355.79999999999995);
     });
-    test('Should correctly calculate planet user life expectancy for each planet', () => {
-      let earthAge = 30;
-      let planetAge = new PlanetAge(earthAge);
-      expect(planetAge.lifeExpect()).toEqual();
-    }
-    )
+  test('Should correctly calculate user life expectancy for each planet', () => {
+    expect(planetAge.planetAgeCalc()).toEqual();
+  });
+});
+
+describe('ActivityLifeExpect', () => {
+  test('Should correctly calculate earth life expectancy based on user activity level', () =>{
+    
+  })
 });
 
 
