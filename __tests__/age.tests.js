@@ -12,6 +12,11 @@ describe('PlanetAge', () => {
   let planetAge = new PlanetAge(yourAge);
   expect(planetAge.mercuryAge()).toEqual(7.199999999999999);
   });
+  test('Should correctly calculate user age in Venus yers.',() => {
+    let yourAge = 30;
+    let planetAge = new PlanetAge(yourAge);
+    expect(planetAge.VenusAge()).toEqual(18.6);
+    });
 });
 
 
