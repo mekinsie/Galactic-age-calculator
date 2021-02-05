@@ -10,7 +10,7 @@ describe('PlanetAge', () => {
   test('Should correctly calculate user age in Mercury yers.',() => {
   let yourAge = 30;
   let planetAge = new PlanetAge(yourAge);
-  expect(planetAge.mercuryAge()).toEqual(7.2);
+  expect(planetAge.mercuryAge()).toEqual(7.199999999999999);
   });
 });
 
