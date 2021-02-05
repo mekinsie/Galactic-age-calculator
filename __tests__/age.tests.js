@@ -18,7 +18,7 @@ describe('PlanetAge', () => {
     expect(planetAge.venusAge()).toEqual(18.6);
     });
     test('Should correctly calculate user age in Mars years.',() => {
-      let yourAge = 30;
+      let yourAge = 30; 
       let planetAge = new PlanetAge(yourAge);
       expect(planetAge.marsAge()).toEqual(56.4);
       });
