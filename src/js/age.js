@@ -54,5 +54,6 @@ export default class UserDemogaphic {
       case("Mercury"):
       remainLife += ((lifeExpect * 0.24) - planetAge);
     }
+    return remainLife;
   }
 };
