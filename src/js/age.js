@@ -52,7 +52,10 @@ export default class UserDemogaphic {
     let remainLife = 0;
     switch(planet) {
       case("Mercury"):
-      remainLife += ((lifeExpect * 0.24) - planetAge);
+        remainLife += ((lifeExpect * 0.24) - planetAge);
+        break;
+      case("Venus"):
+        break;
     }
     return remainLife;
   }
