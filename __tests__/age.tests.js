@@ -37,10 +37,18 @@ describe('UserDemographic', () => {
     let activityLevel = "High";
     expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(76.7);
   }); 
+  let lifeExpect;
+  beforeEach(() => {
+    lifeExpect= 73;
+  });
   test('Should correctly calculate remaining life to live on Mercury.', () =>{
     let planet = "Mercury"
     let planetAge = 7.2;
-    let lifeExpect = 73;
       expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual(10.32);
     });
+    test('Should correctly calculate remaining life to live on Venus.', () =>{
+      let planet = "Venus"
+      let planetAge = 18.6;
+        expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual(26.66);
+      });
 }); 
