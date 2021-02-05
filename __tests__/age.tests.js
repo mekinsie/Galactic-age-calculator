@@ -6,35 +6,36 @@ describe('UserDemographic', () => {
   beforeEach(() => {
     userDemographic = new UserDemographic(30);
   });
-test('Should correctly create a userDemographic object with planet and their formula values', () => {
+  test('Should correctly create a userDemographic object with planet and their formula values', () => {
     expect(userDemographic.earthAge).toEqual(30);
   });
-test('Should correctly calculate user age in Mercury years.',() => {
-    let planet = "Mercury"
+  test('Should correctly calculate user age in Mercury years.',() => {
+    let planet = "Mercury";
     expect(userDemographic.planetAgeCalc(planet)).toEqual(7.199999999999999);
   });
-test('Should correctly calculate user age in Venus years.',() => {
-    let planet = "Venus"
+  test('Should correctly calcu;late user age in Venus years.',() => {
+    let planet = "Venus";
     expect(userDemographic.planetAgeCalc(planet)).toEqual(18.6);
   });
-test('Should correctly calculate user age in Mars years.',() => {
-    let planet = "Mars"
+  test('Should correctly calculate user age in Mars years.',() => {
+    let planet = "Mars";
     expect(userDemographic.planetAgeCalc(planet)).toEqual(56.4);
   });
-test('Should correctly calculate user age in Jupiter years.',() => {
-    let planet = "Jupiter"
+  test('Should correctly calculate user age in Jupiter years.',() => {
+    let planet = "Jupiter";
     expect(userDemographic.planetAgeCalc(planet)).toEqual(355.79999999999995);
   });
-  let planetAge;
-  let planet;
-  beforeEach(() => {
-    planetAge = 7.2;
-    planet = "Mercury";
-  });
-  test('Should correctly calculate earth life expectancy based on user sedentary activity', () =>{
+  test('Should correctly calculate earth life expectancy based on sedentary activity', () =>{
     let activityLevel = "Sedentary";
-      expect(userDemographic.determineLifeExpect(activityLevel).toEqual(73);
-    })
+    expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(73);
+  });
+});
+  // let planetAge;
+  // let planet;
+  // beforeEach(() => {
+  //   planetAge = 7.2;
+  //   planet = "Mercury";
+  // });
   // test('Should correctly calculate earth life expectancy based on user moderate activity', () =>{
   //     let activityLevel = "Moderate";
   //     expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(74.3);
