@@ -9,7 +9,7 @@ export default class PlanetAge {
     return (this.yourAge * 0.62);
   }
   marsAge () {
-    return "fail"
+    return (this.yourAge * 1.88);
   }
   }
 
