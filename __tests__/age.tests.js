@@ -25,7 +25,7 @@ describe('PlanetAge', () => {
   test('Should correctly calculate user age in Jupiter years.',() => {
     let yourAge = 30; 
     let planetAge = new PlanetAge(yourAge);
-    expect(planetAge.jupiterAge()).toEqual(355.8);
+    expect(planetAge.jupiterAge()).toEqual(355.79999999999995);
     });
 });
 

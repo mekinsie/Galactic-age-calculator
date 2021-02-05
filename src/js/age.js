@@ -12,7 +12,7 @@ export default class PlanetAge {
     return (this.yourAge * 1.88);
   }
  jupiterAge () {
-    return "fail";
+    return (this.yourAge * 11.86);
   }
   }
 
