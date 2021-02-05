@@ -22,7 +22,7 @@ describe('PlanetAge', () => {
     let planetAge = new PlanetAge(yourAge);
     expect(planetAge.marsAge()).toEqual(56.4);
     });
-  test('Should correctly calculate user age in Mars years.',() => {
+  test('Should correctly calculate user age in Jupiter years.',() => {
     let yourAge = 30; 
     let planetAge = new PlanetAge(yourAge);
     expect(planetAge.jupiterAge()).toEqual(355.8);
