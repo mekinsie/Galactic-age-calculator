@@ -29,21 +29,8 @@ describe('UserDemographic', () => {
     let activityLevel = "Sedentary";
     expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(73);
   });
-});
-  // let planetAge;
-  // let planet;
-  // beforeEach(() => {
-  //   planetAge = 7.2;
-  //   planet = "Mercury";
-  // });
-  // test('Should correctly calculate earth life expectancy based on user moderate activity', () =>{
-  //     let activityLevel = "Moderate";
-  //     expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(74.3);
-  //   })
-  // });
-
-
-
-// expect(userDemographic.venus).toEqual(earthAge * 0.62);
-// expect(userDemographic.mars).toEqual(earthAge * 1.88);
-// expect(userDemographic.jupiter).toEqual(earthAge * 11.86);
+  test('Should correctly calculate earth life expectancy based on moderate activity', () =>{
+    let activityLevel = "Moderate";
+    expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(74.3);
+  });  
+}); 
