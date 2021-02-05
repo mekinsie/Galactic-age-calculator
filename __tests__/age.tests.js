@@ -33,4 +33,8 @@ describe('UserDemographic', () => {
     let activityLevel = "Moderate";
     expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(74.3);
   });  
+  test('Should correctly calculate earth life expectancy based on high activity', () =>{
+    let activityLevel = "High";
+    expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(76.7);
+  }); 
 }); 
