@@ -1,6 +1,7 @@
-export default class PlanetAge {
-  constructor(earthAge) {
+export default class UserDemogaphic {
+  constructor(earthAge, activityLevel) {
     this.earthAge = earthAge;
+    this.activityLevel = activityLevel;
   }
   planetAgeCalc (planet) {
     if (planet === "Mercury") {
