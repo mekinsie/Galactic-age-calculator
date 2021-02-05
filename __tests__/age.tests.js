@@ -33,8 +33,17 @@ describe('UserDemographic', () => {
     let activityLevel = "Moderate";
     expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(74.3);
   });  
-  test('Should correctly calculate earth life expectancy based on high activity', () =>{
+  test('Should correctly determine earth life expectancy based on high activity', () =>{
     let activityLevel = "High";
     expect(userDemographic.determineLifeExpect(activityLevel)).toEqual(76.7);
   }); 
+  let planetAge;
+  let planet;
+  beforeEach(() => {
+    planetAge = 7.2;
+    planet = "Mercury";
+  });
+  test('Should correctly calculate remaining life to live on each planet.', () =>{
+      expect(userDemographic.calcRemainingLife(activityLevel)).toEqual(74.3);
+    });
 }); 
