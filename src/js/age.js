@@ -1,9 +1,8 @@
 export default class UserDemogaphic {
-  constructor(earthAge, activityLevel) {
+  constructor(earthAge, planetAge, activityLevel) {
     this.earthAge = earthAge;
     this.planetAge = planetAge;
     this.activityLevel = activityLevel;
-    earthLifeExpect = 73;b
   }
   planetAgeCalc (planet) {
     if (planet === "Mercury") {
@@ -23,11 +22,12 @@ export default class UserDemogaphic {
       return planetAge;
       }
   }
-  //73 years is the average earth life expectancy for a human.
-  // Exercise increases life expectancy from 0.43 years to 6.9 years. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/The added years of life for each activity level are based on this, but have no factual meaning.
-  planetLifeExpect () {
-    if (this.activityLevel === "Sedentary" && planet=== "Mercury") {
-      return (((73-3.7)*0.24)) - planetAge;
+  //~73 years is the average earth life expectancy for a human. https://ourworldindata.org/life-expectancy#:~:text=The%20United%20Nations%20estimate%20a,life%20expectancy%20of%2072.3%20years.
+  // Moderate and high physical activity levels led to 1.3 and 3.7 years more in life expectancy. https://pubmed.ncbi.nlm.nih.gov/16287764/
+  
+  planetLifeExpect (planetAge, activityLevel, planet) {
+    if (activityLevel === "Sedentary" && planet === "Mercury") {
+      return (((73+0)*0.24) - planetAge); 
     }
   }
 }

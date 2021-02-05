@@ -28,9 +28,11 @@ describe('UserDemographic', () => {
   test('Should correctly calculate user life expectancy for each planet', () => {
       expect(userDemographic.planetAgeCalc()).toEqual();
   });
-  test('Should correctly calculate earth life expectancy based on user activity level', () =>{
-    // activityLevel = "Medium"
-      expect(userDemographic.planetLifeExpect()).toEqual(0);
+  test('Should correctly calculate earth life expectancy based on user sedentary activity', () =>{
+    let activityLevel = "Sedentary";
+    let planetAge = 56.4;
+    let planet = "Mercury";
+      expect(userDemographic.planetLifeExpect(planetAge, activityLevel, planet)).toEqual(0);
     })
   });
 
