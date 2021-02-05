@@ -43,7 +43,7 @@ describe('UserDemographic', () => {
     planetAge = 7.2;
     planet = "Mercury";
   });
-  test('Should correctly calculate remaining life to live on each planet.', () =>{
+  test('Should correctly calculate remaining life to live on Mercury.', () =>{
       expect(userDemographic.calcRemainingLife(activityLevel)).toEqual(74.3);
     });
 }); 
