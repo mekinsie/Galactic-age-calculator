@@ -46,9 +46,14 @@ describe('UserDemographic', () => {
     let planetAge = 7.2;
       expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual(10.32);
     });
-    test('Should correctly calculate remaining life to live on Venus.', () =>{
-      let planet = "Venus"
-      let planetAge = 18.6;
-        expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual(26.659999999999997);
-      });
+  test('Should correctly calculate remaining life to live on Venus.', () =>{
+    let planet = "Venus"
+    let planetAge = 18.6;
+      expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual(26.659999999999997);
+    });
+  test('Should correctly calculate remaining life to live on Mars.', () =>{
+    let planet = "Mars"
+    let planetAge = 56.4;
+      expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual();
+    });
 }); 
