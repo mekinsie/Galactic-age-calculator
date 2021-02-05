@@ -35,6 +35,8 @@ export default class UserDemogaphic {
       case("Sedentary"):
         lifeExpect += 0;
         break;
+      case("Moderate"):
+      break;  
       default: 
         return ("Please select an activity level.")
     }
