@@ -17,6 +17,9 @@ export default class UserDemogaphic {
       return (this.earthAge * 11.86);
       }
   }
+  planetLifeExpect () {
+    return this.activityLevel;
+  }
 }
 
 
