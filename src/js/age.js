@@ -25,11 +25,21 @@ export default class UserDemogaphic {
   //~73 years is the average earth life expectancy for a human. https://ourworldindata.org/life-expectancy#:~:text=The%20United%20Nations%20estimate%20a,life%20expectancy%20of%2072.3%20years.
   // Moderate and high physical activity levels led to 1.3 and 3.7 years more in life expectancy. https://pubmed.ncbi.nlm.nih.gov/16287764/
   
-  planetLifeExpect (planetAge, activityLevel, planet) {
+  planetLifeRemain (planetAge, activityLevel, planet) {
     if (activityLevel === "Sedentary" && planet === "Mercury") {
-      return (((73+0)*0.24) - planetAge); 
+      let lifeRemain = (((73+0)*0.24) - planetAge);
+      return lifeRemain; 
+    } 
+    else {
+      return ("Please select an activity level.")
     }
   }
 }
 
 
+// if (lifeRemain < 0) {
+//   return ("You have surpassed the average life expectancy by " + Math.abs(lifeRemain) + "years.")
+// }
+// else {
+//   return lifeRemain;
+// } 

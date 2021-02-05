@@ -30,9 +30,9 @@ describe('UserDemographic', () => {
   });
   test('Should correctly calculate earth life expectancy based on user sedentary activity', () =>{
     let activityLevel = "Sedentary";
-    let planetAge = 56.4;
+    let planetAge = 7.2;
     let planet = "Mercury";
-      expect(userDemographic.planetLifeExpect(planetAge, activityLevel, planet)).toEqual(0);
+      expect(userDemographic.planetLifeRemain(planetAge, activityLevel, planet)).toEqual(10.32);
     })
   });
 
