@@ -1,18 +1,18 @@
 export default class PlanetAge {
-  constructor(yourAge) {
-    this.yourAge = yourAge;
+  constructor(earthAge) {
+    this.earthAge = earthAge;
   }
   mercuryAge () {
-    return (this.yourAge * 0.24);
+    return (this.earthAge * 0.24);
   }
   venusAge () {
-    return (this.yourAge * 0.62);
+    return (this.earthAge * 0.62);
   }
   marsAge () {
-    return (this.yourAge * 1.88);
+    return (this.earthAge * 1.88);
   }
  jupiterAge () {
-    return (this.yourAge * 11.86);
+    return (this.earthAge * 11.86);
   }
   }
 
