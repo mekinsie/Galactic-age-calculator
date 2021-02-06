@@ -67,6 +67,7 @@ describe('UserDemographic', () => {
     test('Should return a message if a user has already surpassed the average life expectancy',()=>{
       userDemographic = new UserDemographic(30, "Sedentary", 73, 355.8);
       let planet = "Mercury";
-      expect(userDemographic.calcRemainLife(planet)).toEqual(`You have surpassed your life expectancy by ${Math.abs(remainLife)} years.`)
+      let remainLife = 0;
+      expect(userDemographic.calcRemainLife(planet, remainLife)).toEqual(`You have surpassed your life expectancy by ${Math.abs(remainLife)} years.`)
     });
 }); 
