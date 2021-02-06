@@ -25,6 +25,9 @@ describe('UserDemographic', () => {
     let planet = "Jupiter";
     expect(userDemographic.planetAgeCalc(planet)).toEqual(355.79999999999995);
   });
+  test('Should correctly return a message when a planet is not selected.', () => {
+    expect(userDemographic.planetAgeCalc()).toEqual();
+  });
 
 
   test('Should correctly calculate earth life expectancy based on sedentary activity', () =>{

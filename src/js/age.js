@@ -22,7 +22,7 @@ export default class UserDemogaphic {
         planetAge = (this.earthAge * 11.86);
         break;
       default:
-        return ("Please choose a planet");
+        return ("Please select a planet");
       }
   return planetAge;
   }
