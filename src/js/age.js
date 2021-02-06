@@ -5,6 +5,7 @@ export default class UserDemogaphic {
     this.activityLevel = activityLevel;
     this.lifeExpect = lifeExpect;
   }
+
   planetAgeCalc (planet) {
     let planetAge = 0;
     switch (planet){
@@ -29,9 +30,9 @@ export default class UserDemogaphic {
   //~73 years is the average earth life expectancy for a human. https://ourworldindata.org/life-expectancy#:~:text=The%20United%20Nations%20estimate%20a,life%20expectancy%20of%2072.3%20years.
   // Moderate and high physical activity levels led to 1.3 and 3.7 years more in life expectancy. https://pubmed.ncbi.nlm.nih.gov/16287764/
   
-  determineLifeExpect (activityLevel) {
+  determineLifeExpect () {
     let lifeExpect = 73;
-    switch (activityLevel) {
+    switch (this.activityLevel) {
       case("Sedentary"):
         lifeExpect += 0;
         break;
@@ -46,7 +47,6 @@ export default class UserDemogaphic {
     }
   return lifeExpect;
   }
-
 
   calcRemainLife (lifeExpect, planet, planetAge) {
     let remainLife = 0;
