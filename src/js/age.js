@@ -58,6 +58,7 @@ export default class UserDemogaphic {
         remainLife += ((lifeExpect * 0.62) - planetAge);
         break;
       case("Mars"):
+        remainLife += ((lifeExpect * 1.88) - planetAge);
         break;
     }
     return remainLife;

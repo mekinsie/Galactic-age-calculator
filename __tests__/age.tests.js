@@ -54,6 +54,6 @@ describe('UserDemographic', () => {
   test('Should correctly calculate remaining life to live on Mars.', () =>{
     let planet = "Mars"
     let planetAge = 56.4;
-      expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual();
+      expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual(80.83999999999997);
     });
 }); 
