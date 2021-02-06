@@ -40,7 +40,7 @@ describe('UserDemographic', () => {
     expect(userDemographic.determineLifeExpect()).toEqual(76.7);
   }); 
   test('Should display a message when no activity level is set',()=> {
-    expect(userDemographic.determineLifeExpect()).toEqual("Please choose an activity level.");
+    expect(userDemographic.determineLifeExpect()).toEqual("Please select an activity level.");
   });
   test('Should correctly calculate remaining life to live on Mercury.', () =>{
     let planet = "Mercury"
