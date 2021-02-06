@@ -1,4 +1,3 @@
-import { TestScheduler } from 'jest';
 import UserDemographic from '../src/js/age.js'
 
 describe('UserDemographic', () => {

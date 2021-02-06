@@ -64,13 +64,13 @@ export default class UserDemogaphic {
       case("Jupiter"):
         remainLife += ((this.lifeExpect * 11.86) - this.planetAge);
         break;
-      };
+      }
       if (remainLife < 0) {
         return (`You have surpassed your life expectancy by ${Math.abs(remainLife)} years.`);
       }
       else {        
         return remainLife;
-      };
-    };
-  };
+      }
+    }
+  }
   

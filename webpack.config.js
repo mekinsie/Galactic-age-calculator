@@ -16,14 +16,11 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(), 
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      title: 'Super Galactic Age Calculator',
       template: './src/index.html',
       inject: 'body'
     })
   ],
-
-
-
   module: {
     rules: [
       {
@@ -32,11 +29,6 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
       },
       {
         test: /\.(gif|png|jpe?g)$/,
@@ -55,6 +47,11 @@ module.exports = {
         use: [
           'html-loader'
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
       },
     ]
   }
