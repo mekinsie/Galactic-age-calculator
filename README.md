@@ -1,6 +1,6 @@
-# (Super Galactic Age Calculator )
+# Super Galactic Age Calculator
 
-#### (This application will calculate your age depending on what planet you are on.)
+#### This application will calculate your age depending on what planet you are on.
 
 #### By _**Mekinsie Callahan**_
 
