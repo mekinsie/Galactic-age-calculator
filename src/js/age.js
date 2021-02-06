@@ -1,9 +1,10 @@
 export default class UserDemogaphic {
-  constructor(earthAge, activityLevel, lifeExpect, planetAge) {
+  constructor(earthAge, activityLevel, lifeExpect, planetAge, remainLife) {
     this.earthAge = earthAge;
     this.planetAge = planetAge;
     this.activityLevel = activityLevel;
     this.lifeExpect = lifeExpect;
+    this.remainLife = remainLife;
   }
 
   planetAgeCalc (planet) {
@@ -63,12 +64,13 @@ export default class UserDemogaphic {
       case("Jupiter"):
         remainLife += ((this.lifeExpect * 11.86) - this.planetAge);
         break;
-      }
+      };
       if (remainLife < 0) {
-        return remainLife;
+        return (`You have surpassed your life expectancy by ${Math.abs(remainLife)} years.`);
       }
       else {        
         return remainLife;
-      }
-  }
-};
+      };
+    };
+  };
+  
