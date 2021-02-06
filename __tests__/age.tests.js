@@ -29,7 +29,6 @@ describe('UserDemographic', () => {
     expect(userDemographic.planetAgeCalc()).toEqual("Please select a planet");
   });
 
-
   test('Should correctly calculate earth life expectancy based on sedentary activity', () =>{
     let userDemographic = new UserDemographic(30, "Sedentary");
     expect(userDemographic.determineLifeExpect()).toEqual(73);
@@ -46,23 +45,28 @@ describe('UserDemographic', () => {
     expect(userDemographic.determineLifeExpect()).toEqual("Please select an activity level.");
   });
   test('Should correctly calculate remaining life to live on Mercury.', () =>{
-    let planet = "Mercury"
+    let planet = "Mercury";
     let userDemographic = new UserDemographic(30, "Sedentary", 73, 7.2);
       expect(userDemographic.calcRemainLife(planet)).toEqual(10.32);
     });
   test('Should correctly calculate remaining life to live on Venus.', () =>{
-    let planet = "Venus"
+    let planet = "Venus";
     let userDemographic = new UserDemographic(30, "Sedentary", 73, 18.6);
       expect(userDemographic.calcRemainLife(planet)).toEqual(26.659999999999997);
     });
   test('Should correctly calculate remaining life to live on Mars.', () =>{
-    let planet = "Mars"
+    let planet = "Mars";
     let userDemographic = new UserDemographic(30, "Sedentary", 73, 56.4);
       expect(userDemographic.calcRemainLife (planet)).toEqual(80.83999999999997);
     });
     test('Should correctly calculate remaining life to live on Jupiter.', () =>{
       userDemographic = new UserDemographic(30, "Sedentary", 73, 355.8);
-      let planet = "Jupiter"
+      let planet = "Jupiter";
       expect(userDemographic.calcRemainLife(planet)).toEqual(509.97999999999996);
+    });
+    test('Should return a message if a user has already surpassed the average life expectancy',()=>{
+      userDemographic = new UserDemographic(30, "Sedentary", 73, 355.8);
+      let planet = "Mercury";
+      expect(userDemographic.calcRemainLife(planet)).toEqual(`You have surpassed your life expectancy by ${Math.abs(remainLife)} years.`)
     });
 }); 

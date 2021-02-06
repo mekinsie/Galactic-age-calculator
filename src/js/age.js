@@ -64,6 +64,7 @@ export default class UserDemogaphic {
         remainLife += ((this.lifeExpect * 11.86) - this.planetAge);
         break;
     }
+    
     return remainLife;
   }
 };
