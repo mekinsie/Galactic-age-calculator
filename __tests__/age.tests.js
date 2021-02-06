@@ -56,4 +56,9 @@ describe('UserDemographic', () => {
     let planetAge = 56.4;
       expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual(80.83999999999997);
     });
+  test('Should correctly calculate remaining life to live on Jupiter.', () =>{
+    let planet = "Jupiter"
+    let planetAge = 355.8;
+      expect(userDemographic.calcRemainLife(lifeExpect, planet, planetAge)).toEqual();
+    });
 }); 
