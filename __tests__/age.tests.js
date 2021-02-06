@@ -39,7 +39,9 @@ describe('UserDemographic', () => {
     let userDemographic = new UserDemographic(30, "High");
     expect(userDemographic.determineLifeExpect()).toEqual(76.7);
   }); 
-
+  test('Should display a message when no activity level is set',()=> {
+    expect(userDemographic.determineLifeExpect()).toEqual("Please choose an activity level.");
+  });
 
   test('Should correctly calculate remaining life to live on Mercury.', () =>{
     let planet = "Mercury"
@@ -56,9 +58,9 @@ describe('UserDemographic', () => {
     let userDemographic = new UserDemographic(30, "Sedentary", 73, 56.4);
       expect(userDemographic.calcRemainLife (planet)).toEqual(80.83999999999997);
     });
-  test('Should correctly calculate remaining life to live on Jupiter.', () =>{
-    let planet = "Jupiter"
-    let userDemographic = new UserDemographic(30, "Sedentary", 73, 355.8);
+    test('Should correctly calculate remaining life to live on Jupiter.', () =>{
+      userDemographic = new UserDemographic(30, "Sedentary", 73, 355.8);
+      let planet = "Jupiter"
       expect(userDemographic.calcRemainLife(planet)).toEqual(509.97999999999996);
     });
 }); 
