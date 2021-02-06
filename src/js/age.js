@@ -1,5 +1,5 @@
 export default class UserDemogaphic {
-  constructor(earthAge, planetAge, activityLevel, lifeExpect) {
+  constructor(earthAge, activityLevel, lifeExpect, planetAge) {
     this.earthAge = earthAge;
     this.planetAge = planetAge;
     this.activityLevel = activityLevel;
@@ -48,20 +48,20 @@ export default class UserDemogaphic {
   return lifeExpect;
   }
 
-  calcRemainLife (lifeExpect, planet, planetAge) {
+  calcRemainLife (planet) {
     let remainLife = 0;
     switch(planet) {
       case("Mercury"):
-        remainLife += ((lifeExpect * 0.24) - planetAge);
+        remainLife += ((this.lifeExpect * 0.24) - this.planetAge);
         break;
       case("Venus"):
-        remainLife += ((lifeExpect * 0.62) - planetAge);
+        remainLife += ((this.lifeExpect * 0.62) - this.planetAge);
         break;
       case("Mars"):
-        remainLife += ((lifeExpect * 1.88) - planetAge);
+        remainLife += ((this.lifeExpect * 1.88) - this.planetAge);
         break;
       case("Jupiter"):
-        remainLife += ((lifeExpect * 11.86) - planetAge);
+        remainLife += ((this.lifeExpect * 11.86) - this.planetAge);
         break;
     }
     return remainLife;
