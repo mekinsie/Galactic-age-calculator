@@ -7,7 +7,7 @@
     "build": "webpack --mode development",
     "start": "npm run build & webpack-dev-server --open --mode development",
     "test": "jest --coverage",
-    "lint": "eslint src/js/*.js"
+    "lint": "eslint src/*.js"
   },
   "keywords": [],
   "author": "",

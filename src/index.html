@@ -1,6 +1,33 @@
 <html lang="en-US">
 <head>
+  <title>Galactic Age Calculator</title>
 </head>
 <body>
+<div id="header">
+  <h1>Super Galactic Age Calculator!</h1>
+</div>
+<div id="form">
+  <form #age>
+    <label for="age">Enter your age:</label>
+    <input id="age" type="number" min=0 max=150>
+    <label for="activity-level">Select your activity level:</label>
+    <select id="activity-level" name="activity-level">
+      <option value="Sedentary">Sedentary (no exercise)</option>
+      <option value="Moderate">Moderate (exercise once or twice a week)</option>
+      <option value="High">High (exercise more than 3 times a week)</option>
+    </select>
+    <button type="button" id="Mercury" value="Mercury">Mercury</button>
+    <button type="submit" id="Venus" value="Venus">Venus</button>
+    <button type="submit" id="Mars" value="Mars">Mars</button>
+    <button type="submit" id="Jupiter" value="Jupiter">Jupiter</button>
+<!-- 
+    <div id="submit">
+      <button type="submit" id="submit">Submit</button>
+    </div> -->
+  </form>
+</div>
+<div id="results">
+  
+</div>
 </body>
 </html>
