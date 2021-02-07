@@ -51,26 +51,26 @@ describe('UserDemographic', () => {
   test('Should correctly calculate remaining life to live on Mercury.', () =>{
     let planet = "Mercury";
     let planetAge = 7.2;
-      expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(10.32);
+    expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(10.32);
     });
   test('Should correctly calculate remaining life to live on Venus.', () =>{
     let planet = "Venus";
     let planetAge = 18.6;
-      expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(26.659999999999997);
+    expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(26.659999999999997);
     });
   test('Should correctly calculate remaining life to live on Mars.', () =>{
     let planet = "Mars";
     let planetAge = 56.4;
-      expect(userDemographic.calcRemainLife (planet, lifeExpect, planetAge)).toEqual(80.83999999999997);
+    expect(userDemographic.calcRemainLife (planet, lifeExpect, planetAge)).toEqual(80.83999999999997);
     });
-    test('Should correctly calculate remaining life to live on Jupiter.', () =>{
-      let planet = "Jupiter";
-      let planetAge = 355.8;
-      expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(509.97999999999996);
-    });
-    test('Should return a message if a user has already surpassed the average life expectancy',()=>{
-      let planet = "Mercury";
-      let planetAge = 24
-      expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual("You have surpassed your life expectancy by 6.5 years.")
+  test('Should correctly calculate remaining life to live on Jupiter.', () =>{
+    let planet = "Jupiter";
+    let planetAge = 355.8;
+    expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(509.97999999999996);
+  });
+  test('Should return a message if a user has already surpassed the average life expectancy',()=>{
+    let planet = "Mercury";
+    let planetAge = 24
+    expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual("You have surpassed your life expectancy by 6.5 years.")
     });
 }); 
