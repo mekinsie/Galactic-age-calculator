@@ -1,10 +1,7 @@
 export default class UserDemogaphic {
   constructor(earthAge, activityLevel) {
     this.earthAge = earthAge;
-    // this.planetAge = planetAge;
     this.activityLevel = activityLevel;
-    // this.lifeExpect = lifeExpect;
-    // this.remainLife = remainLife;
   }
 
   planetAgeCalc (planet) {

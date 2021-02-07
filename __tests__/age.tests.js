@@ -27,7 +27,6 @@ describe('UserDemographic', () => {
   test('Should correctly return a message when a planet is not selected.', () => {
     expect(userDemographic.planetAgeCalc()).toEqual("Please select a planet");
   });
-
   test('Should correctly calculate earth life expectancy based on sedentary activity', () =>{
     let userDemographic = new UserDemographic(30, "Sedentary");
     expect(userDemographic.determineLifeExpect()).toEqual(73);
@@ -41,31 +40,37 @@ describe('UserDemographic', () => {
     expect(userDemographic.determineLifeExpect()).toEqual(76.7);
   }); 
   test('Should display a message when no activity level is set',()=> {
+    let userDemographic = new UserDemographic(30);
     expect(userDemographic.determineLifeExpect()).toEqual("Please select an activity level.");
+  });
+  let lifeExpect;
+  beforeEach(() => {
+    userDemographic = new UserDemographic(30, "Sedentary");
+    lifeExpect = 73;
   });
   test('Should correctly calculate remaining life to live on Mercury.', () =>{
     let planet = "Mercury";
-    let userDemographic = new UserDemographic(30, "Sedentary", 73, 7.2);
-      expect(userDemographic.calcRemainLife(planet)).toEqual(10.32);
+    let planetAge = 7.2;
+      expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(10.32);
     });
   test('Should correctly calculate remaining life to live on Venus.', () =>{
     let planet = "Venus";
-    let userDemographic = new UserDemographic(30, "Sedentary", 73, 18.6);
-      expect(userDemographic.calcRemainLife(planet)).toEqual(26.659999999999997);
+    let planetAge = 18.6;
+      expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(26.659999999999997);
     });
   test('Should correctly calculate remaining life to live on Mars.', () =>{
     let planet = "Mars";
-    let userDemographic = new UserDemographic(30, "Sedentary", 73, 56.4);
-      expect(userDemographic.calcRemainLife (planet)).toEqual(80.83999999999997);
+    let planetAge = 56.4;
+      expect(userDemographic.calcRemainLife (planet, lifeExpect, planetAge)).toEqual(80.83999999999997);
     });
     test('Should correctly calculate remaining life to live on Jupiter.', () =>{
-      userDemographic = new UserDemographic(30, "Sedentary", 73, 355.8);
       let planet = "Jupiter";
-      expect(userDemographic.calcRemainLife(planet)).toEqual(509.97999999999996);
+      let planetAge = 355.8;
+      expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual(509.97999999999996);
     });
     test('Should return a message if a user has already surpassed the average life expectancy',()=>{
-      userDemographic = new UserDemographic(100, "Sedentary", 73, 24);
       let planet = "Mercury";
-      expect(userDemographic.calcRemainLife(planet)).toEqual("You have surpassed your life expectancy by 6.48 years.")
+      let planetAge = 24
+      expect(userDemographic.calcRemainLife(planet, lifeExpect, planetAge)).toEqual("You have surpassed your life expectancy by 6.48 years.")
     });
 }); 

@@ -10,7 +10,6 @@ $(document).ready(function(){
     let earthAge = $("#age").val();
     let planet = $("#planet option:selected").val();
     let activityLevel = $("#activity-level option:selected").val();
-    
     let user = new UserDemographic(earthAge, activityLevel);
     let planetAge = user.planetAgeCalc(planet);
     let lifeExpect = user.determineLifeExpect();
