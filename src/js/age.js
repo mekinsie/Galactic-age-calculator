@@ -63,7 +63,7 @@ export default class UserDemogaphic {
         break;
       }
       if (remainLife < 0) {
-        return (`You have surpassed your life expectancy by ${Math.abs(remainLife)} years.`);
+        return (`You have surpassed your life expectancy by ${Math.abs(remainLife.toFixed(1))} years.`);
       }
       else {        
         return remainLife;
