@@ -4,22 +4,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import UserDemographic from './js/age.js';
 
-$(document).ready(function() {
-  $('#age-activity-form').submit(function(event) {
+$(document).ready(function(){
+  $('form#age-activity-form').submit(function(event){
     event.preventDefault();
     $("div#results").empty();
-    let planet = $("button#planet").val();
     let earthAge = $("#age").val();
+    let planet = $("#planet option:selected").val();
     let activityLevel = $("#activity-level option:selected").val();
 
-    planetAgeCalc(planet);
-    determineLifeExpect();
-    let user = new UserDemographic(earthAge, activityLevel, lifeExpect, planetAge);
-    calcRemainLife(planet);
-    user.remainLife = remainLife;
+    let user = new UserDemographic(earthAge, activityLevel);
+    let planetAge = user.planetAgeCalc(planet);
+    let lifeExpect = user.determineLifeExpect();
+    let remainLife = user.calcRemainLife(planet, lifeExpect, planetAge);
 
-    $("div#results").append(`On this planet, you are ${user.planetAge} years old.`);
-
-
+    $("div#results").append(`On ${planet}, you are ${planetAge} years old. You have ${remainLife} years left of living.`);
   });
 });
