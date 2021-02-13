@@ -11,6 +11,8 @@
 * _Bootstrap_
 * _JavaScript_
 * _jQuery_
+* _Node Package Manager_
+* _Webpack
 
 ## Description
 This application uses a planet's solar years and calculates your age based on which planet you choose. It also presents the remaining years a user has left for that planet. If the user has outlived the average life expectancy, the surpassed number of years will be displayed in a message. 
@@ -43,8 +45,11 @@ $ code .
 ``` bash
 $ npm install
 ```
-
-8. To view the html file in your default browser from your cloned repo, type "npm run start" into your terminal. This will build a dist folder and package the src folder contents into a bundle.js and a index.html file and place them into a dist folder. Finally, a live server will automatically be opened in your default web browser. 
+8. Now that all the needed dependencies are downloaded including Jest, you may run tests on the project if you choose. To do so, navigate to the __tests__ folder and open age.tests.js to see the existing tests. Type npm run test into your terminal. This will cause Jest to run each of the written tests. Jest will provide information on whether or not the test failed or passed and why. 
+``` bash
+$ npm run test
+```
+9. To view the html file in your default browser from your cloned repo, type "npm run start" into your terminal. This will build a dist folder and package the src folder contents into a bundle.js and a index.html file and place them into a dist folder. Finally, a live server will automatically be opened in your default web browser. 
 ``` bash
 $ npm run start
 ```
